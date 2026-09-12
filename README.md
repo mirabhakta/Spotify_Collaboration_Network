@@ -1,54 +1,111 @@
-# Charting Connections: Spotify Artist Collaboration Network
+# 🎵 Charting Connections: Spotify Artist Collaboration Network
 
-This project is a Streamlit dashboard that analyzes the Spotify Artist Feature Collaboration Network. The dashboard explores how artists are connected through feature collaborations and uses network analysis to study central artists, genre communities, and small-world structure.
+An interactive Streamlit dashboard exploring how Spotify artists are connected through featured collaborations using network analysis and graph-based metrics.
 
-## Project Overview
+🌐 **Live Demo:** https://spotify-collaboration-network.streamlit.app/
 
-Artist collaborations are an important part of the music industry because they can help artists reach new audiences, connect different genres, and increase visibility. This project uses a network analysis approach to look beyond popularity and follower count by examining how artists are structurally connected to one another.
+## Overview
+
+Artist collaborations can help musicians reach new audiences, bridge genres, and increase visibility. This project analyzes the structure of Spotify artist collaborations to understand which artists occupy influential positions within the network and how collaboration patterns form across genres.
+
+Rather than looking only at popularity or follower count, we use graph-based measures to examine artists' structural roles within the collaboration network.
+
+## My Contributions
+
+This project was developed as a team project with **Michelle Villagomez** and **Caden Maki**.
+
+I primarily contributed to:
+
+- Constructing and visualizing the artist collaboration network
+- Performing graph-based and network analysis
+- Calculating and interpreting centrality, clustering, and path-based metrics
+- Identifying influential hubs and bridge artists
+- Analyzing genre-based communities and collaboration patterns
+- Evaluating small-world properties within the network
+- Interpreting results and translating findings into dashboard visualizations
+
+Michelle Villagomez and I were primarily responsible for the network construction, graph analysis, and interpretation of results. Caden Maki primarily contributed to the project's final conclusions.
 
 ## Research Questions
 
-**RQ1:** Which artists serve as the most central hubs or bridges in the Spotify collaboration network, and does an artist’s centrality relate to Spotify popularity or follower count?
+### RQ1 — Influence and Centrality
+Which artists serve as the most central hubs or bridges in the Spotify collaboration network, and does an artist's centrality relate to Spotify popularity or follower count?
 
-**RQ2:** Do meaningful genre-based communities emerge from artist collaboration patterns, and do artists collaborate mostly within or across genre boundaries?
+### RQ2 — Genre Communities
+Do meaningful genre-based communities emerge from artist collaboration patterns, and do artists collaborate mostly within or across genre boundaries?
 
-**RQ3:** Does the Spotify artist collaboration network show small-world properties, with high clustering and short path lengths that could help collaborations or music trends spread?
+### RQ3 — Small-World Structure
+Does the Spotify artist collaboration network display small-world properties, including high clustering and short path lengths that may help collaborations or music trends spread?
 
 ## Dataset
 
-The project uses two main CSV files:
+The project uses two primary datasets:
 
-- `nodes.csv`: Contains artist information such as Spotify ID, artist name, followers, popularity, genres, and chart hits.
-- `edges.csv`: Contains collaboration relationships between artists using Spotify artist IDs.
+- `nodes.csv` — artist-level information including Spotify ID, artist name, followers, popularity, genres, and chart hits
+- `edges.csv` — collaboration relationships between artists represented by Spotify artist IDs
 
 ## Network Model
 
 - **Nodes:** Spotify artists
-- **Edges:** Feature collaborations between two artists
+- **Edges:** Featured collaborations between artists
 - **Network type:** Undirected and unweighted
 - **Scope:** Static collaboration snapshot from 2013–2022
 
+## Analysis
+
+The project examines the collaboration network using several graph and network-analysis concepts, including:
+
+- Degree centrality
+- Betweenness centrality
+- Network hubs and bridge artists
+- Community structure
+- Genre-based collaboration patterns
+- Clustering
+- Average path length
+- Small-world properties
+
+These metrics help distinguish artists who are simply popular from artists who occupy structurally important positions within the collaboration network.
+
 ## Dashboard Features
 
-The dashboard includes:
+The Streamlit dashboard includes:
 
-- Overview of the project and research questions
-- Network summary metrics
-- Centrality analysis for RQ1
-- Genre and community analysis for RQ2
-- Small-world analysis for RQ3
-- Discussion, limitations, and ethical issues tab
+- Project and dataset overview
+- Network summary statistics
+- Interactive network visualizations
+- Artist centrality analysis
+- Popularity and follower comparisons
+- Genre and community analysis
+- Small-world network analysis
+- Discussion of findings, limitations, and ethical considerations
 
-## How to Run
+## Tech Stack
 
-1. Clone the repo
+**Python · Streamlit · Pandas · Network Analysis · Graph Theory · Data Visualization**
 
-Install the required packages:
+## Run Locally
+
+Clone the repository:
+
+```bash
+git clone https://github.com/mirabhakta/Spotify_Collaboration_Network.git
+cd Spotify_Collaboration_Network
+````
+
+Install the required dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
-Then run the dashboard: 
+
+Run the Streamlit dashboard:
+
 ```bash
 streamlit run dashboard.py
 ```
+
+## Live Demo
+
+Explore the deployed dashboard here:
+
+https://spotify-collaboration-network.streamlit.app/
